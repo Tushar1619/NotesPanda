@@ -2,6 +2,11 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div>About</div>
+    <div>
+      <div className="container home">
+        <h2>About Notes Panda</h2>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae quod corrupti quis aliquam ea blanditiis iste aspernatur suscipit deleniti ullam nihil vitae esse dolorem in, error, culpa mollitia architecto. Dolores nulla atque consectetur rem error eligendi, necessitatibus perspiciatis velit nihil repellat similique accusantium facere tenetur odio pariatur, unde, iusto quaerat possimus. Maxime non, similique vero deleniti officia nisi voluptas possimus veniam asperiores. Soluta, beatae, dolore placeat minus eum officiis ipsa minima magnam accusantium vitae ex qui sequi eius recusandae. Amet labore mollitia asperiores perspiciatis animi ab tempore error dolorem atque ea perferendis quasi ad, non hic explicabo quam nostrum quas maiores. Voluptate aliquam, magni sint id pariatur deleniti et libero quisquam consectetur inventore quidem, exercitationem saepe sequi molestias voluptatibus doloribus, fuga reiciendis corporis consequuntur ex! Quia mollitia consequatur exercitationem sequi deserunt quo totam consequuntur! Hic libero a eligendi praesentium, ducimus delectus expedita esse assumenda? Sequi, at nesciunt. Iusto, voluptatum! Dignissimos quae animi natus minus quam impedit reiciendis, recusandae harum enim sapiente fugiat quo optio architecto ullam at deserunt voluptate assumenda tenetur consectetur eius? Dolor labore praesentium excepturi eos accusamus ipsum ad soluta vero aspernatur, saepe possimus necessitatibus totam iusto architecto, incidunt quam beatae? Aperiam aut eos rem consectetur quasi officiis quas, sit porro explicabo voluptas doloremque corporis dolorem, nisi ea harum. Dolores totam reiciendis eum maxime iure cumque voluptate, modi labore aliquid quos adipisci quisquam officiis qui quibusdam quas impedit expedita vero ea excepturi? Ea soluta ex molestias perspiciatis accusantium fugit, quia architecto? Est odit, doloribus quasi qui necessitatibus, consequatur sed ab iste dolorem libero ipsum esse recusandae amet explicabo eum. Modi repudiandae, molestiae quidem expedita ratione blanditiis assumenda voluptate pariatur? Voluptatibus eaque optio veniam, deleniti, ullam vero a facilis, enim culpa unde laudantium in qui consectetur accusamus? Qui, alias. Pariatur ratione, exercitationem sapiente modi ut reiciendis voluptates corrupti mollitia.
+      </div>
+    </div>
   )
 }

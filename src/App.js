@@ -10,6 +10,7 @@ import {
 import NoteState from "./Context/Notes/NoteState";
 import Login from "./Comp/Login";
 import Signup from "./Comp/Signup";
+import NotesPanda from "./Comp/NotesPanda";
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
           <Navbar />
           {/* {alert && <Alert/>} */}
           <Routes>
+          <Route path="/" element={<NotesPanda />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
