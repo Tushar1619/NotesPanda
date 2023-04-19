@@ -20,7 +20,7 @@ export default function Login() {
         }
         
         console.log(body);
-        const response = await axios.post('http://localhost:4000/api/auth/login', body);
+        const response = await axios.post('https://lime-mushy-turtle.cyclic.app/api/auth/login', body);
         const res =  response.data;
         console.log(res.success);
         if (res.success === true) {

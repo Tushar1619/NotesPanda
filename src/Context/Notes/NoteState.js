@@ -9,7 +9,7 @@ export default function NoteState({ children }) {
   const data = []
   const [notes, changeNotes] = useState(data)
   const getAllNotes = async () => {
-    const response = await axios.get('http://localhost:4000/api/notes/fetchallnotes', {
+    const response = await axios.get('https://lime-mushy-turtle.cyclic.app/api/notes/fetchallnotes', {
       headers: {
         "auth-token": localStorage.getItem('token')
       }
@@ -28,7 +28,7 @@ export default function NoteState({ children }) {
       tag: tag
     }
     // eslint-disable-next-line
-    const response = await axios.post('http://localhost:4000/api/notes/addnote',
+    const response = await axios.post('https://lime-mushy-turtle.cyclic.app/api/notes/addnote',
       body
       , {
         headers: {
@@ -47,7 +47,7 @@ export default function NoteState({ children }) {
       description: description,
       tag: tag
     }
-    const response = await axios.put(`http://localhost:4000/api/notes/editnote/${id}`,
+    const response = await axios.put(`https://lime-mushy-turtle.cyclic.app/api/notes/editnote/${id}`,
       body
       , {
         headers: {
@@ -60,7 +60,7 @@ export default function NoteState({ children }) {
 
   //delete notes from the database done!
   const deleteNote = async (id) => {
-    const response = await axios.delete(`http://localhost:4000/api/notes/deletenote/${id}`, {
+    const response = await axios.delete(`https://lime-mushy-turtle.cyclic.app/api/notes/deletenote/${id}`, {
       headers: {
         "auth-token": localStorage.getItem('token')
       }

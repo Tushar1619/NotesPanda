@@ -18,7 +18,7 @@ export default function Signup() {
             password: creds.password
         }
         console.log(body);
-        const response = await axios.post('http://localhost:4000/api/auth/createuser', body);
+        const response = await axios.post('https://lime-mushy-turtle.cyclic.app/api/auth/createuser', body);
         const res = response.data;
         console.log(res.success);
         if (res.success === true) {
