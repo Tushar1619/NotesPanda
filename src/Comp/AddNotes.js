@@ -34,7 +34,7 @@ export default function AddNotes() {
                         </div>
                         <div className="mb-3"> 
                             <label htmlFor="description" className="form-label">Description</label>
-                            <textarea id='description' value={note.description} name='description' rows={10} cols={146} onChange={onChange} ></textarea>
+                            <textarea id='description' class="form-control" value={note.description} name='description' rows={10} cols={146} onChange={onChange} ></textarea>
                             {/* <input type="textarea" className="form-control" id="description" /> */}
                         </div>
                        

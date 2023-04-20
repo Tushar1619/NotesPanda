@@ -5,13 +5,19 @@ import axios from 'axios';
 export default function Signup() {
 
     let navigate = useNavigate();
-    const [creds, setCreds] = useState({ firstName: "", email: "", password: "" });
+    const [creds, setCreds] = useState({ firstName: "", email: "", password: "", cpassword: "" });
+
     const onChange = (e) => {
         setCreds({ ...creds, [e.target.name]: e.target.value })
     }
 
     const formSubmit = async (e) => {
         e.preventDefault();
+        if (creds.password !== creds.cpassword) {
+            alert("Password does not macth");
+            return;
+        }
+
         const body = {
             firstName: creds.firstName,
             email: creds.email,
@@ -33,30 +39,52 @@ export default function Signup() {
 
     return (
         <div>
-            <div className="container center_div">
-                <h1 className='mb-4 text-center'>NotesPanda</h1>
-                <h3 className='mb-4 text-center'>SignUp</h3>
+            <div class="container home">
+
+
                 <form onSubmit={formSubmit}>
-                    <div className="form-row">
-                        <div className="form-group ">
-                            <label htmlFor="firstName">Name</label>
-                            <input type="text" required minLength={3} className="form-control" id="firstName" name="firstName" placeholder="John" onChange={onChange} />
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h1>Register</h1>
+
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col mt-4">
+                                    <input type="text" name='firstName' class="form-control" placeholder="User Name" onChange={onChange} />
+                                </div>
+                            </div>
+                            <div class="row align-items-center mt-4">
+                                <div class="col">
+                                    <input type="email" name='email' class="form-control" placeholder="Email" onChange={onChange} />
+                                </div>
+                            </div>
+                            <div class="row align-items-center mt-4">
+                                <div class="col">
+                                    <input type="password" name='password' class="form-control" placeholder="Password" onChange={onChange} />
+                                </div>
+                                <div class="col">
+                                    <input type="password" name='cpassword' class="form-control" placeholder="Confirm Password" onChange={onChange} />
+                                </div>
+                            </div>
+                            <div class="row justify-content-start mt-4">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" />
+                                            I Read and Accept <a href="https://github.com/Tushar1619/NotesPanda">Terms and Conditions</a>
+                                        </label>
+                                    </div>
+
+                                    <button class="btn btn-primary mt-4">Submit</button>
+                                    <hr />
+                                    <button type="button" class="btn btn-link"><Link to="/login">Login</Link></button>
+                                </div>
+                            </div>
                         </div>
-                        <div className="form-group ">
-                            <label htmlFor="inputEmail4">Email</label>
-                            <input type="email" required  className="form-control" id="inputEmail4" name="email" placeholder="Email" onChange={onChange} />
-                        </div>
-                        <div className="form-group  mb-2">
-                            <label htmlFor="password">Password</label>
-                            <input type="password" required minLength={5} className="form-control" id="password" name="password" placeholder="Password" onChange={onChange} />
-                        </div>
-                        {/* <div className="form-group col-md-6 mb-2">
-                            <label htmlFor="confPassword">Confirm Password</label>
-                            <input type="password" className="form-control" id="confPassword" name="confPassword" placeholder="Confirm Password" onChange={onChange}/>
-                        </div> */}
                     </div>
-                    <Link className="nav-link text-primary mb-3 mx-1" to="/login">Login!</Link>
-                    <button type="submit" className="btn btn-primary">Sign in</button>
                 </form>
             </div>
         </div>

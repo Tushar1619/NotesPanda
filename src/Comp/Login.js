@@ -18,10 +18,10 @@ export default function Login() {
             email: creds.email,
             password: creds.password
         }
-        
+
         console.log(body);
         const response = await axios.post('https://lime-mushy-turtle.cyclic.app/api/auth/login', body);
-        const res =  response.data;
+        const res = response.data;
         console.log(res.success);
         if (res.success === true) {
             localStorage.setItem('token', res.token);
@@ -36,7 +36,7 @@ export default function Login() {
 
         <div>
 
-            <div className="container  center_div home">
+            {/* <div className="container  center_div home">
                 <h1 className='mb-4 text-center'>NotesPanda</h1>
                 <h3 className='mb-4 text-center'>Login</h3>
                 <form onSubmit={formSubmit}>
@@ -63,8 +63,39 @@ export default function Login() {
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
 
-                </form>
+                </form> */}
+            {/* </div> */}
+
+            <div class="back home2">
+
+                    
+                <div class="div-center">
+
+
+                    <div class="content">
+
+
+                        <h3>Login</h3>
+                        <hr />
+                        <form onSubmit={formSubmit}>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Email" onChange={onChange}/>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" name='password' required minLength={5} id="exampleInputPassword1" placeholder="Password" onChange={onChange}/>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-2 ">Login</button>
+                            <hr />
+                            <button type="button" class="btn btn-link"><Link to="/signup">Signup</Link></button>
+                            {/* <button type="button" class="btn btn-link">Reset Password</button> */}
+
+                        </form>
+
+                    </div>
+                </div>
             </div>
-        </div>
-    )
+            </div>
+            )
 }
